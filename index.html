@@ -8,6 +8,8 @@
 	<title>Whiskey Drop</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/ac8551d6f8.js" crossorigin="anonymous"></script>
+
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,500,700|Roboto:300i,400,700i&display=swap"
 		rel="stylesheet">
 
@@ -16,6 +18,7 @@
 </head>
 
 <body>
+
 	<!-- Navigation -->
 	<nav class="navbar navbar-dark bg-dark navbar-expand-sm">
 		<a href="/" class="navbar-brand">Whiskey Drop</a>
@@ -26,26 +29,52 @@
 			<ul class="navbar-nav mr-auto">
 				<li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
 				<li class="nav-item mr-2"><a class="nav-link" href="/about">About</a></li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Whiskeys
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="#">Irish</a>
+						<a class="dropdown-item" href="#">Scotch</a>
+						<a class="dropdown-item" href="#">Japanese</a>
+						<a class="dropdown-item" href="#">American</a>
+					</div>
+				</li>
+
 				<li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="/login">Sign Up</a></li>
 			</ul>
-
-			<div class="d-none d-md-block">
-				<p class="navbar-text my-auto mr-2"><i>Great whiskey delivered to your door!</i></p>
-				<a href="/login">Sign In/Sign Up</a>
-			</div>
+		</div>
+		<div class="d-none d-md-block">
+			<p class="navbar-text my-auto mr-2"><i>Great whiskey delivered to your door!</i></p>
+			<a href="/login">Sign In/Sign Up</a>
 		</div>
 	</nav>
 	<!-- /.Navigation -->
 	<article class="container mt-4">
+		<div class="d-none d-sm-block">
+			<div class="row">
+				<div class="col-12">
+					<div class="alert alert-warning">
+						<strong>Sale Now On! </strong>We've got a sale, get 12 months subscription for the price of 6!
+						<a href="#">See here for details!</a>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- Callout section -->
 		<section class="callout jumbotron text-center">
 			<div class="row">
 				<div class="col-12">
 					<h1>The finest Whiskey's delivered to your doorstep.</h1>
 					<p>Sign up today to start recieving the world's best whiskeys every month. The first month is
-						free! <s class="d-none d-sm-inline">£19.99</s><span class="d-inline d-sm-none"><br></span><strong><mark>First one is free!</mark></strong></p>
-					<a href="#" class="btn btn-lg btn-success">Sign Up!</a>
-                     <p class="text-muted font-italic"><small>You must be over 18 to apply, please drink responsibly.</small></p>
+						free! <s
+							class="d-none d-sm-inline">£19.99</s><span class="d-inline d-sm-none"><br></span><strong><mark>First one is free!</mark></strong>
+					</p>
+					<a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#SignUpModal">Sign
+						Up!</a>
+					<p class="text-muted font-italic">
+						<small>You must be over 18 to apply, please drink responsibly.</small></p>
 				</div>
 			</div>
 		</section>
@@ -62,21 +91,36 @@
 			<!-- /.Quotes heading -->
 			<div class="row">
 				<div class="col-12 col-md-6">
-					<blockquote class="blockquote font-weight-light">
-						<p class="font-italic">"I've been introduced to more than 10 great international whiskeys I
-							never
-							knew
-							about."</p>
-						<p>- Jane Doe</p>
-					</blockquote>
-				</div>
-				<div class="col-12 col-md-6">
-					<blockquote class="blockquote font-weight-light col-12 col-md-6">
-						<p class="font-italic">"I haven't been sober for months!"</p>
-						<p>- John Doe</p>
-					</blockquote>
-				</div>
-			</div>
+					<div class="media">
+						<div class="d-none d-md-block">
+							<img src="Images/girl-image.png" class="rounded-circle mr-3" alt="girl-with-hat" height="100" width="100">
+							</div>
+							<div class="media-body">
+								<blockquote class="blockquote font-weight-light">
+									<p class="font-italic">"I've been introduced to more than 10 great international
+										whiskeys I
+										never
+										knew
+										about."</p>
+									<p>- Jane Doe</p>
+								</blockquote>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6">
+						<div class="media">
+							<div class="d-none d-md-block">
+								<img src="Images/guy-image.png" alt="Beardy-guy" class="rounded-circle mr-3" height="100" width="100">
+							</div>
+								<div class="media-body">
+									<blockquote class="blockquote font-weight-light col-12 col-md-6">
+										<p class="font-italic">"I haven't been sober for months!"</p>
+										<p>- John Doe</p>
+									</blockquote>
+								</div>
+							</div>
+						</div>
+					</div>
 
 		</section>
 		<!-- /.Quotes section -->
@@ -92,7 +136,8 @@
 			<div class="row">
 				<div class="col-12 col-md-6 col-lg-4">
 					<div class="feature">
-						<h3>Feature 1</h3>
+						<h3><i class="fas fa-gift d-none d-sm-inline"></i> Feature 1
+							<span class="badge badge-success">NEW!</span></h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 							labore
 							et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -104,7 +149,7 @@
 				</div>
 				<div class="col-12 col-md-6 col-lg-4">
 					<div class="feature">
-						<h3>Feature 2</h3>
+						<h3><i class="fas fa-credit-card d-none d-sm-inline"></i> Feature 2</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 							labore
 							et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -116,7 +161,7 @@
 				</div>
 				<div class="col-12 d-md-none d-lg-block col-lg-4">
 					<div class="feature">
-						<h3>Feature 3</h3>
+						<h3><i class="fas fa-times-circle d-none d-sm-inline"></i> Feature 3</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 							labore
 							et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -130,6 +175,38 @@
 			</div>
 
 		</section>
+
+		<div class="modal" tabindex="-1" role="dialog" id="SignUpModal">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Sign up to Whiskey Drop!</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group">
+								<label for="exampleInputEmail1">Email address</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@whiskeydrop.com">
+								<small id="emailHelp" class="form-text text-muted font-italic">We'll never share your email with anyone else.</small>
+							</div>
+							<div class="form-group">
+								<label for="password">Password</label>
+								<input type="password" class="form-control" id="password" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+								<label for="RepeatPassword">Repeat Password</label>
+								<input type="password" class="form-control" id="RepeatPassword" placeholder="Repeat Password">
+                            </div>
+								<button type="submit" class="btn btn-success">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- /.features section -->
 	</article>
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
